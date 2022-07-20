@@ -2,7 +2,7 @@
 
 sudo dnf -y update
 yes | dnf copr enable frostyx/qtile
-dnf install -y git lxappearance qtile qtile-extras
+dnf install -y git lxappearance qtile qtile-extras kitty
 cd /home/$USER/Downloads
 git clone https://github.com/stronk-dev/Tokyo-Night-Linux.git
 cp -a /home/$USER/Downloads/Tokyo-Night-Linux/usr/share/themes/TokyoNight /usr/share/themes
