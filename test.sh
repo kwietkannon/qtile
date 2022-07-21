@@ -29,6 +29,9 @@ sudo dnf group update core -y
 sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin -y 
 sudo dnf groupupdate sound-and-video -y
 
+#### Wallpaper
+wget https://resi.ze-robot.com/dl/as/astronaut-29-1920%C3%971080.jpg -P /home/$USER/Downloads
+feh --bg-scale /home/$USER/Downloads/astronaut-29-1920x1080.jpg
 
 
 
