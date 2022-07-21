@@ -6,8 +6,9 @@ yes | dnf copr enable frostyx/qtile
 # not sure if I need @base-x was using it for lightdm. 
 dnf install -y git lxappearance pcmanfm qtile qtile-extras kitty picom nitrogen NetworkManager-wifi wget unzip lxdm @base-x rofi dunst autocpu-freq vim firefox \
 xautolock i3lock
-sudo 
+sudo mkdir /home/$USER/Downloads
 cd /home/$USER/Downloads
+sudo chown $USER:$USER Downloads
 git clone https://github.com/stronk-dev/Tokyo-Night-Linux.git
 cp -a /home/$USER/Downloads/Tokyo-Night-Linux/usr/share/themes/TokyoNight /usr/share/themes
 wget https://github.com/source-foundry/Hack/releases/download/v3.003/Hack-v3.003-ttf.zip
