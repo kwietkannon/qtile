@@ -19,4 +19,14 @@ sudo chmod +x /home/$USER/.config/qtile/autostart.sh
 sudo systemctl enable lightdm.service
 sudo systemctl set-default graphical.target
 
+##### RPM Fusion Repos
+sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
+https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf group update core
+sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
+sudo dnf groupupdate sound-and-video
+
+
+
+
  
