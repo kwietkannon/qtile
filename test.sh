@@ -4,7 +4,7 @@ sudo dnf -y update
 sudo usermod -aG wheel $USER
 yes | dnf copr enable frostyx/qtile 
 # not sure if I need @base-x was using it for lightdm. 
-dnf install -y git lxappearance pcmanfm qtile qtile-extras kitty picom nitrogen NetworkManager-wifi wget unzip lxdm @base-x dmenu dunst autocpu-freq vim
+dnf install -y git lxappearance pcmanfm qtile qtile-extras kitty picom nitrogen NetworkManager-wifi wget unzip lxdm @base-x rofi dunst autocpu-freq vim
 cd /home/$USER/Downloads
 git clone https://github.com/stronk-dev/Tokyo-Night-Linux.git
 cp -a /home/$USER/Downloads/Tokyo-Night-Linux/usr/share/themes/TokyoNight /usr/share/themes
