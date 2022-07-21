@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
 picom &
-nitrogen --restore &
+xautolock -time 5 -locker i3lock --detectsleep &
+~/.fehbg & 
 
