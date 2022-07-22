@@ -11,7 +11,7 @@ echo yes | sudo dnf copr enable frostyx/qtile
 echo yes | sudo dnf copr enable szydell/system76
 # not sure if I need @base-x was using it for lightdm. 
 sudo dnf install -y git lxappearance pcmanfm qtile qtile-extras kitty picom feh NetworkManager-wifi wget unzip lxdm @base-x rofi dunst vim firefox \
-i3lock
+i3lock discord bpytop 
 sudo mkdir /home/$USER/Downloads && sudo chown $USER:$USER Downloads
 cd /home/$USER/Downloads
 git clone https://github.com/stronk-dev/Tokyo-Night-Linux.git
@@ -56,4 +56,8 @@ sudo systemctl enable system76power
 sudo mkdir /home/$USER/.config/rofi && sudo chown kwietkannon:kwietkannon rofi
 curl https://raw.githubusercontent.com/dracula/rofi/master/theme/config1.rasi -o /home/$USER/.config/rofi/config.rasi
 
- 
+##### Visual studio Repos
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
+dnf check-update
+sudo dnf install code
