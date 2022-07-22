@@ -19,7 +19,7 @@ git clone https://github.com/kwietkannon/qtile
 sudo mkdir -p /home/$USER/.config/qtile && cp -a qtile/config.py /home/$USER/.config/qtile/
 sudo cp -a qtile/autostart.sh /home/$USER/.config/qtile/
 sudo chmod +x /home/$USER/.config/qtile/autostart.sh
-sudo systemctl enable lightdm.service
+sudo systemctl enable lxdm.service
 sudo systemctl set-default graphical.target
 
 ##### RPM Fusion Repos
