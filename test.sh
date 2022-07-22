@@ -35,7 +35,7 @@ sudo dnf groupupdate sound-and-video -y
 
 #### Wallpaper
 sudo wget https://resi.ze-robot.com/dl/as/astronaut-29-1920%C3%971080.jpg -P /home/$USER/Downloads
-sudo echo '#!/bin/sh' >> .fehbg && sudo echo "feh --no-fehbg --bg-scale" '/home/$USER/Downloads/astronaut-29-1920x1080.jpg' >> /home/$USER/.fehbg && sudo chmod +x .fehbg
+sudo echo '#!/bin/sh' >> .fehbg && sudo echo "feh --no-fehbg --bg-scale" /home/$USER/Downloads/astronaut-29-1920x1080.jpg >> /home/$USER/.fehbg && sudo chmod +x .fehbg
 
 ##### Kitty theme/config
 sudo mkdir /home/$USER/.config/kitty/ && sudo chown kwietkannon:kwietkannon /home/$USER/.config/kitty/
