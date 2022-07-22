@@ -3,6 +3,7 @@
 ##### Fedora 36 Netinstall
 ##### Additional software "Common NetworkMaanager Submodules" and "Standard" added
 ##### Laptop model System 76 darter pro (Darp5)
+##### missing iwlwifi-9000-pu-b0-jf-b0-46
 
 sudo dnf -y update
 sudo usermod -aG wheel $USER
