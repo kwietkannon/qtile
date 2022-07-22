@@ -11,9 +11,8 @@ sudo dnf copr enable frostyx/qtile
 # not sure if I need @base-x was using it for lightdm. 
 sudo dnf install -y git lxappearance pcmanfm qtile qtile-extras kitty picom feh NetworkManager-wifi wget unzip lxdm @base-x rofi dunst vim firefox \
 i3lock
-sudo mkdir /home/$USER/Downloads
+sudo mkdir /home/$USER/Downloads && sudo chown $USER:$USER Downloads
 cd /home/$USER/Downloads
-sudo chown $USER:$USER Downloads
 git clone https://github.com/stronk-dev/Tokyo-Night-Linux.git
 sudo cp -a /home/$USER/Downloads/Tokyo-Night-Linux/usr/share/themes/TokyoNight /usr/share/themes
 sudo wget https://github.com/source-foundry/Hack/releases/download/v3.003/Hack-v3.003-ttf.zip
@@ -37,6 +36,10 @@ sudo dnf groupupdate sound-and-video -y
 #### Wallpaper
 sudo wget https://resi.ze-robot.com/dl/as/astronaut-29-1920%C3%971080.jpg -P /home/$USER/Downloads
 #feh --bg-scale /home/$USER/Downloads/astronaut-29-1920x1080.jpg (have to have x running before this can be applied)
+
+##### Kitty theme/config
+sudo mkdir /home/$USER/.config/kitty/ && sudo chown kwietkannon:kwietkannon /home/$USER/.config/kitty/
+git clone https://github.com/davidmathers/tokyo-night-kitty-theme.git
 
 
 
