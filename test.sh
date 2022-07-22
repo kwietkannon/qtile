@@ -9,16 +9,16 @@ sudo dnf -y update
 sudo usermod -aG wheel $USER
 sudo dnf copr enable frostyx/qtile 
 # not sure if I need @base-x was using it for lightdm. 
-dnf install -y git lxappearance pcmanfm qtile qtile-extras kitty picom feh NetworkManager-wifi wget unzip lxdm @base-x rofi dunst autocpu-freq vim firefox \
+sudo dnf install -y git lxappearance pcmanfm qtile qtile-extras kitty picom feh NetworkManager-wifi wget unzip lxdm @base-x rofi dunst autocpu-freq vim firefox \
 i3lock
 sudo mkdir /home/$USER/Downloads
 cd /home/$USER/Downloads
 sudo chown $USER:$USER Downloads
 git clone https://github.com/stronk-dev/Tokyo-Night-Linux.git
-cp -a /home/$USER/Downloads/Tokyo-Night-Linux/usr/share/themes/TokyoNight /usr/share/themes
-wget https://github.com/source-foundry/Hack/releases/download/v3.003/Hack-v3.003-ttf.zip
+sudo cp -a /home/$USER/Downloads/Tokyo-Night-Linux/usr/share/themes/TokyoNight /usr/share/themes
+sudo wget https://github.com/source-foundry/Hack/releases/download/v3.003/Hack-v3.003-ttf.zip
 unzip Hack-v3.003-ttf.zip
-cp -a /home/$USER/Downloads/ttf/* /usr/share/fonts
+sudo cp -a /home/$USER/Downloads/ttf/* /usr/share/fonts
 fc-cache -f -v
 git clone https://github.com/kwietkannon/qtile
 sudo mkdir -p /home/$USER/.config/qtile && cp -a qtile/config.py /home/$USER/.config/qtile/
