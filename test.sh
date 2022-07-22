@@ -40,6 +40,7 @@ sudo echo '#!/bin/sh' >> .fehbg && sudo echo "feh --no-fehbg --bg-scale" /home/$
 ##### Kitty theme/config
 sudo mkdir /home/$USER/.config/kitty/ && sudo chown kwietkannon:kwietkannon /home/$USER/.config/kitty/
 git clone https://github.com/davidmathers/tokyo-night-kitty-theme.git
+sudo mv tokyo-night-kitty-theme/tokyo-night-kitty.conf /home/$USER/.config/kitty/
 
 
 
