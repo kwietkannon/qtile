@@ -1,4 +1,8 @@
 #! /bin/bash
+##### OS Info
+##### Fedora 36 Netinstall
+##### Additional software "Common NetworkMaanager Submodules" and "Standard" added
+##### Laptop model System 76 darter pro (Darp5)
 
 sudo dnf -y update
 sudo usermod -aG wheel $USER
