@@ -38,9 +38,11 @@ sudo wget https://resi.ze-robot.com/dl/as/astronaut-29-1920%C3%971080.jpg -P /ho
 sudo echo '#!/bin/sh' >> .fehbg && sudo echo "feh --no-fehbg --bg-scale" /home/$USER/Downloads/astronaut-29-1920x1080.jpg >> /home/$USER/.fehbg && sudo chmod +x .fehbg
 
 ##### Kitty theme/config
-sudo mkdir /home/$USER/.config/kitty/ && sudo chown kwietkannon:kwietkannon /home/$USER/.config/kitty/
+sudo mkdir -p /home/$USER/.config/kitty/themes && sudo chown kwietkannon:kwietkannon /home/$USER/.config/kitty/
 git clone https://github.com/davidmathers/tokyo-night-kitty-theme.git
-sudo mv tokyo-night-kitty-theme/tokyo-night-kitty.conf /home/$USER/.config/kitty/
+sudo curl https://raw.githubusercontent.com/kwietkannon/.config/main/kitty/kitty.conf >> /home/$USER/.config/kitty/kitty.conf
+sudo mv tokyo-night-kitty-theme/tokyo-night-kitty.conf /home/$USER/.config/kitty/themes
+
 
 
 
