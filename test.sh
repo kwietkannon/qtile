@@ -52,5 +52,8 @@ sudo curl https://raw.githubusercontent.com/kwietkannon/.config/system76power.se
 sudo systemctl start system76power
 sudo systemctl enable system76power
 
+##### Rofi theme 
+sudo mkdir /home/$USER/.config/rofi && sudo chown kwietkannon:kwietkannon rofi
+curl https://raw.githubusercontent.com/dracula/rofi/master/theme/config1.rasi -o /home/$USER/.config/rofi/config.rasi
 
  
