@@ -36,7 +36,7 @@ sudo dnf groupupdate sound-and-video -y
 
 #### Wallpaper
 sudo wget https://resi.ze-robot.com/dl/as/astronaut-29-1920%C3%971080.jpg -P /home/$USER/Downloads
-feh --bg-scale /home/$USER/Downloads/astronaut-29-1920x1080.jpg
+#feh --bg-scale /home/$USER/Downloads/astronaut-29-1920x1080.jpg (have to have x running before this can be applied)
 
 
 
