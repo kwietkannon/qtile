@@ -48,6 +48,9 @@ sudo mv tokyo-night-kitty-theme/tokyo-night-kitty.conf /home/$USER/.config/kitty
 echo yes | sudo dnf install system76-dkms system76-power system76-driver system76-firmware firmware-manager system76-io-dkms system76-acpi-dkms
 sudo systemctl enable system76-power-wake system76-firmware-daemon
 sudo systemctl start system76-firmware-daemon
+sudo curl https://raw.githubusercontent.com/kwietkannon/.config/system76power.service >> /etc/systemd/system/system76power.service
+sudo systemctl start system76power
+sudo systemctl enable system76power
 
 
  
