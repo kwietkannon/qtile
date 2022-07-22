@@ -5,7 +5,7 @@ sudo usermod -aG wheel $USER
 yes | dnf copr enable frostyx/qtile 
 # not sure if I need @base-x was using it for lightdm. 
 dnf install -y git lxappearance pcmanfm qtile qtile-extras kitty picom nitrogen NetworkManager-wifi wget unzip lxdm @base-x rofi dunst autocpu-freq vim firefox \
-xautolock i3lock
+i3lock
 sudo mkdir /home/$USER/Downloads
 cd /home/$USER/Downloads
 sudo chown $USER:$USER Downloads
