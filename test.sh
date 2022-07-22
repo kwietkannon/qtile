@@ -21,7 +21,7 @@ unzip Hack-v3.003-ttf.zip
 sudo cp -a /home/$USER/Downloads/ttf/* /usr/share/fonts
 fc-cache -f -v
 git clone https://github.com/kwietkannon/qtile
-sudo mkdir -p /home/$USER/.config/qtile && cp -a qtile/config.py /home/$USER/.config/qtile/
+sudo mkdir -p /home/$USER/.config/qtile && sudo cp -a qtile/config.py /home/$USER/.config/qtile/
 sudo cp -a qtile/autostart.sh /home/$USER/.config/qtile/
 sudo chmod +x /home/$USER/.config/qtile/autostart.sh
 sudo systemctl enable lxdm.service
@@ -35,7 +35,7 @@ sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=Pack
 sudo dnf groupupdate sound-and-video -y
 
 #### Wallpaper
-wget https://resi.ze-robot.com/dl/as/astronaut-29-1920%C3%971080.jpg -P /home/$USER/Downloads
+sudo wget https://resi.ze-robot.com/dl/as/astronaut-29-1920%C3%971080.jpg -P /home/$USER/Downloads
 feh --bg-scale /home/$USER/Downloads/astronaut-29-1920x1080.jpg
 
 
