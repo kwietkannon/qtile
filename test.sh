@@ -61,3 +61,15 @@ sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
 dnf check-update
 sudo dnf install code
+
+##### auto-cpufreq 
+git clone https://github.com/AdnanHodzic/auto-cpufreq.git
+cd auto-cpufreq && sudo ./auto-cpufreq-installer
+sudo auto-cpufreq --install
+# neeed to switch to acpi
+# sudo vim /etc/default/grub
+# add the line to grub: GRUB_CMDLINE_LINUX_DEFAULT="intel_pstate=disable"
+# sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+# reboot
+
+
