@@ -71,5 +71,6 @@ sudo auto-cpufreq --install
 # add the line to grub: GRUB_CMDLINE_LINUX_DEFAULT="intel_pstate=disable"
 # sudo grub2-mkconfig -o /boot/grub2/grub.cfg
 # reboot
-
+git clone https://github.com/kwietkannon/kwietkannon.git
+sudo cp -a kwietkannon/etc/auto-cpurfreq.conf /etc/auto-cpufreq.conf
 
