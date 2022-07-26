@@ -45,12 +45,18 @@ sudo curl https://raw.githubusercontent.com/kwietkannon/.config/main/kitty/kitty
 sudo mv tokyo-night-kitty-theme/tokyo-night-kitty.conf /home/$USER/.config/kitty/themes
 
 ##### Install system 76 packages
-echo yes | sudo dnf install system76-dkms system76-power system76-driver system76-firmware firmware-manager system76-io-dkms system76-acpi-dkms
-sudo systemctl enable system76-power-wake system76-firmware-daemon
-sudo systemctl start system76-firmware-daemon
-sudo curl https://raw.githubusercontent.com/kwietkannon/.config/system76power.service >> /etc/systemd/system/system76power.service
-sudo systemctl start system76power
-sudo systemctl enable system76power
+echo yes | sudo dnf copr enable szydell/system76
+sudo dnf install system76* -y
+sudo systemctl enable --now system76-power.service
+sudo dnf install firmware-manager -y
+sudo systemctl enable --now system76-firmware-daemon
+sudo gpasswd -a $USER adm
+sudo systemctl enable system76-power system76-power-wake
+sudo systemctl start system76-power
+sudo dnf install system76-dkms - 
+sudo systemctl enable dkms
+sudo dnf install system76-acpi-dkms -y
+sudo systemctl enable dkms
 
 ##### Rofi theme 
 sudo mkdir /home/$USER/.config/rofi && sudo chown kwietkannon:kwietkannon rofi
