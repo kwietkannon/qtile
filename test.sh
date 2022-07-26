@@ -9,18 +9,15 @@ sudo dnf -y update
 sudo usermod -aG wheel $USER
 echo yes | sudo dnf copr enable frostyx/qtile
 echo yes | sudo dnf copr enable szydell/system76
+echo yes | sudo dnf copr enable zawertun/hack-fonts
 
 # not sure if I need @base-x was using it for lightdm. 
 sudo dnf install -y git lxappearance pcmanfm qtile qtile-extras kitty picom feh NetworkManager-wifi wget unzip lxdm @base-x rofi dunst vim firefox \
-i3lock discord bpytop 
+i3lock discord bpytop hack-fonts
 sudo mkdir /home/$USER/Downloads && sudo chown $USER:$USER Downloads
 cd /home/$USER/Downloads
 git clone https://github.com/stronk-dev/Tokyo-Night-Linux.git
 sudo cp -a /home/$USER/Downloads/Tokyo-Night-Linux/usr/share/themes/TokyoNight /usr/share/themes
-sudo wget https://github.com/source-foundry/Hack/releases/download/v3.003/Hack-v3.003-ttf.zip
-unzip Hack-v3.003-ttf.zip
-sudo cp -a /home/$USER/Downloads/ttf/* /usr/share/fonts
-fc-cache -f -v
 git clone https://github.com/kwietkannon/qtile
 sudo mkdir -p /home/$USER/.config/qtile && sudo cp -a qtile/config.py /home/$USER/.config/qtile/
 sudo cp -a qtile/autostart.sh /home/$USER/.config/qtile/
