@@ -9,6 +9,7 @@ sudo dnf -y update
 sudo usermod -aG wheel $USER
 echo yes | sudo dnf copr enable frostyx/qtile
 echo yes | sudo dnf copr enable szydell/system76
+
 # not sure if I need @base-x was using it for lightdm. 
 sudo dnf install -y git lxappearance pcmanfm qtile qtile-extras kitty picom feh NetworkManager-wifi wget unzip lxdm @base-x rofi dunst vim firefox \
 i3lock discord bpytop 
@@ -45,7 +46,6 @@ sudo curl https://raw.githubusercontent.com/kwietkannon/.config/main/kitty/kitty
 sudo mv tokyo-night-kitty-theme/tokyo-night-kitty.conf /home/$USER/.config/kitty/themes
 
 ##### Install system 76 packages
-echo yes | sudo dnf copr enable szydell/system76
 sudo dnf install system76* -y
 sudo systemctl enable --now system76-power.service
 sudo dnf install firmware-manager -y
