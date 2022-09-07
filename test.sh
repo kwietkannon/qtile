@@ -77,3 +77,9 @@ sudo auto-cpufreq --install
 git clone https://github.com/kwietkannon/kwietkannon.git
 sudo cp -a kwietkannon/etc/auto-cpurfreq.conf /etc/auto-cpufreq.conf
 
+###### For adding dynamic tiling for i3-gaps
+pip3 install i3ipc
+cd ~/Downloads
+git clone https://github.com/olemartinorg/i3-alternating-layout
+// Add exec --no-startup-id /home/$USER/Downloads/i3-alternating-layout/alternating_layouts.py
+
